@@ -346,6 +346,13 @@ article .icon {
     border-color: rgb(163, 163, 163);
 background: rgb(250, 250, 250);
  }
+ .project-img-1{
+    border-radius: 2rem;
+    max-width: 100%;
+    width: 870px; 
+    height: 90%; 
+    max-height: fit-content;
+ }
 
  .project-img {
     border-radius: 2rem;
