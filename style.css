@@ -211,6 +211,7 @@ section{
     display: flex;
     justify-content: center;
     gap: 1rem;
+    
 }
 
 .btn {
@@ -219,6 +220,7 @@ section{
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
+    border: 2px solid;
 }
 
 .btn-color-1:hover,
@@ -271,6 +273,13 @@ section{
 
 .about-pic {
     border-radius: 2rem;
+}
+
+.icon {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    height: 50px; /* Set a fixed height for consistency */
+    width: auto; /* Maintain aspect ratio */
+    margin-bottom: 1rem; /* Space between icon and text */
 }
 
 .arrow {
@@ -338,7 +347,7 @@ article .icon {
 }
 
 /* PROJECTS SECTION */
-#projects {
+ /* #projects {
     position: relative;
  }
 
@@ -367,6 +376,131 @@ background: rgb(250, 250, 250);
 .project-btn{
     color: black;
     border-color: rgb(163, 163, 163);
+} */
+@media (max-width: 768px) {
+    .details-container {
+        width: 90%; /* Make cards take up more width on smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .project-img-1 {
+        height: 150px; /* Adjust image height for smaller screens */
+    }
+}
+
+#projects {
+    position: relative;
+    padding: 20px;
+}
+
+.project-slider {
+    position: relative;
+    overflow-x: hidden; /* Hide overflow to prevent vertical scroll */
+    width: 100%; /* Ensure the container is full width */
+    scroll-behavior: smooth;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+
+.project-window {
+    display: flex; /* Use flex to arrange the cards horizontally */
+    flex-wrap: nowrap; /* Allow cards to wrap to the next line on smaller screens */
+    justify-content: center;
+    transition: transform 0.5s ease; /* Smooth transition for auto-scroll */
+    width: max-content; /* Allow content to overflow */
+    scroll-snap-type: x mandatory; /* Enforces snapping when scrolling horizontally */
+    scroll-behavior: smooth; /* Optional: Add smooth scrolling for mouse wheel */
+}
+
+.details-container {
+    flex-shrink: 0; /* Prevent shrinking of individual cards */
+    height: 390px;
+    width: 300px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 14px;
+    transition: background-color 0.4s ease; /* Smooth transition for hover effect */
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    scroll-snap-align: start; /* Ensures the card snaps into place when scrolling */
+    overflow: hidden; /* Prevent content overflow */
+    margin: 2rem;
+    transition: transform 0.4s ease, background-color 0.4s ease; /* Smooth transition for hover effect */
+}
+
+.details-container:hover {
+    transform: translateY(-25px); /* Move up slightly on hover */
+    transition: transform 0.4s ease; /* Smooth transition */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    background-color: rgba(240, 240, 240, 0.8);
+    z-index: 1; /* Bring the hovered card to the front */
+    overflow: hidden;
+}
+
+.details-container:hover .project-img-1 {
+    transform: scale(1.06); /* Slightly enlarge image on hover */
+    transition: 0.4s ease; /* Smooth transition */
+    
+}
+
+.project-img-1 {
+    width: 100%; /* Make the image full width of the card */
+    height: 250px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    object-fit:cover;
+    transition: 0.4s ease; /* Smooth transition */
+}
+.project-title {
+    margin: 1.5rem;
+    color: black;
+    font-size: 1.5rem; /* Increased font size for better visibility */
+}
+
+.project-btn {
+    padding: 10px 14px; /* Add padding for better clickability */
+    border-radius: 20px; /* Rounded corners for buttons */
+    transition: background-color 0.4s ease; /* Smooth transition for hover effect */
+    color: rgb(0, 0, 0);
+}
+
+.project-btn:hover {
+    background-color: rgb(0, 0, 0); /* Darker on hover */
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+/* for flip card */ 
+.project-card {
+    position: relative;
+    
+    
+}
+
+.project-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(50, 50, 50, 0.9); /* Dark gray background with some transparency */
+    color: rgb(230, 230, 230); /* Solid white text color */
+    padding: 20px; /* Padding around text */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Prevent interaction when hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+.project-description p {
+    color: rgb(230, 230, 230); /* Ensure all text in description is solid white */
+}
+
+.project-card.active .project-description {
+    opacity: 1; /* Show on active */
+    visibility: visible; /* Allow interaction when visible */
 }
 
 /* CONTACT SECTION */
