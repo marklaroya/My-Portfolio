@@ -86,3 +86,32 @@ function toggleDescription(clickedCard) {
         clickedDescription.style.visibility = 'visible'; // Allow interaction
     }
 }
+
+let isTouchPadScrolling = false;
+
+document.addEventListener('touchstart', () => {
+  isTouchPadScrolling = true;
+});
+
+document.addEventListener('touchend', () => {
+  isTouchPadScrolling = false;
+});
+
+projectSlider.addEventListener('touchmove', (event) => {
+  if (!isTouchPadScrolling) {
+    event.preventDefault();
+    const speedMultiplier = 3;
+    const scrollAmount = event.changedTouches[0].clientY * speedMultiplier;
+
+    if (!isScrolling) {
+      window.requestAnimationFrame(() => {
+        projectSlider.scrollBy({
+          top: scrollAmount,
+          behavior: 'smooth'
+        });
+        isScrolling = false;
+      });
+      isScrolling = true;
+    }
+  }
+});
