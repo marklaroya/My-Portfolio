@@ -392,27 +392,50 @@ background: rgb(250, 250, 250);
     position: relative;
     padding: 20px;
 }
+/* Project slider */
 
 .project-slider {
     position: relative;
-    overflow-x: hidden; /* Hide overflow to prevent vertical scroll */
+    overflow-x: auto; /* Allow horizontal scrolling */
     width: 100%; /* Ensure the container is full width */
     scroll-behavior: smooth;
     user-select: none;
     cursor: pointer;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 transparent; /* Color of the scrollbar for Firefox */
 }
 
+.project-slider::-webkit-scrollbar {
+    height: 8px; /* Height of the scrollbar */
+}
 
+.project-slider::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+.project-slider::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+}
+
+.project-slider::-webkit-scrollbar-track {
+    background: transparent; /* Background of the scrollbar track */
+}
+
+.project-slider:hover::-webkit-scrollbar {
+    display: block; /* Show scrollbar on hover */
+}
 
 .project-window {
     display: flex; /* Use flex to arrange the cards horizontally */
-    flex-wrap: nowrap; /* Allow cards to wrap to the next line on smaller screens */
-    justify-content: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: flex-start; /* Align items to the start */
     transition: transform 0.5s ease; /* Smooth transition for auto-scroll */
     width: max-content; /* Allow content to overflow */
     scroll-snap-type: x mandatory; /* Enforces snapping when scrolling horizontally */
     scroll-behavior: smooth; /* Optional: Add smooth scrolling for mouse wheel */
 }
+
 
 .details-container {
     flex-shrink: 0; /* Prevent shrinking of individual cards */
