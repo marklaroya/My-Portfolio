@@ -5,7 +5,6 @@ function toggleMenu(){
     icon.classList.toggle("open");
 }
 
-
 // for Project Section //
 const style = document.createElement('style');
 style.textContent = `
