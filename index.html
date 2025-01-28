@@ -14,6 +14,13 @@
     <meta property="og:image" content="https://yourwebsite.com/assets/Profile-pic.png">
     <meta property="og:url" content="https://yourwebsite.com">
     <meta name="twitter:card" content="summary_large_image">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXX-Y');
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -137,22 +144,15 @@
                         <article>
                             <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
-                                <h3>C++</h3>
-                                <p>Intermediete</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
                                 <h3>C</h3>
-                                <p>Intermediete</p>
+                                <p>Intermediate</p>
                             </div>
                         </article>
                         <article>
                             <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
                               <h3>Python</h3>
-                              <p>Intermediete</p>
+                              <p>Intermediate</p>
                           </div>
                         </article>
                     </div>
@@ -319,6 +319,23 @@
             </div>
         </nav>
         <p>Copyright &#169; 2024 Mark Lester D Laroya. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+        <p>Copyright &#169; 2024 Mark Lester D Laroya. All Rights Reserved.</p>
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
     </footer>
 
     <script src="script.js"></script>
