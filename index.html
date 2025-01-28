@@ -6,94 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Laroya's Portfolio</title>
+    <meta name="description" content="Mark Lester D Laroya's Portfolio - Programmer & Network Support Engineer">
+    <meta property="og:title" content="Mark Lester D Laroya's Portfolio">
+    <meta property="og:description" content="Explore the projects and experience of Mark Lester D Laroya, a Programmer & Network Support Engineer.">
+    <meta property="og:image" content="https://yourwebsite.com/assets/Profile-pic.png">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+    <!-- Navigation -->
     <nav id="desktop-nav">
         <div class="logo">Mark Lester D Laroya</div>
-    <div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
+        <button id="dark-mode-toggle" onclick="toggleDarkMode()">
+            <i id="dark-mode-icon" class="fas fa-sun"></i>
+        </button>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
     
     <nav id="hamburger-nav">
         <div class="logo">Mark Lester D Laroya</div>
         <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="menu-links">
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
         </div>
     </nav>
+
+    <!-- Profile Section -->
     <section id="profile">
         <div class="section__pic-container">
-            <img src="./assets/Profile-pic.png" alt="Mark Lester Laroya Picture">
+            <img src="./assets/Lester.png" alt="Mark Lester Laroya Picture">
         </div>
         <div class="section__text"> 
             <p class="section__text__p1">Hello, I'm</p>
-            <h1>Mark Lester Laroya</h1>
-        <p class="section__text__p2">Programmer & Network Support Engineer</p>
-        <div class="btn-container">
-            <button class="btn btn-color-2" onclick="window.open('./assets/Mark_Lester_Laroya_Resume.pdf')">
-                Download CV
-            </button>
-            <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                Contact Info
-             </button>
-        </div>
+            <h1 class="main-heading">Mark Lester D Laroya</h1>
+            <p class="section__text__p2">Programmer & Network Support Engineer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/Mark_Lester_Laroya_Resume.pdf')">
+                    Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
             <div id="socials-container">
-             <img src="/assets/linkedin.png"
-             alt="My LinkedIn profile"
-             class="icon"
-             onclick="window.open('https://www.linkedin.com/in/mark-lester-laroya-215b9b252')"
-             />
-             <img src="/assets/github.png"
-             alt="My Github profile"
-             class="icon"
-             onclick="window.open('https://github.com/marklaroya')"
-             />
+                <img src="/assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="window.open('https://www.linkedin.com/in/mark-lester-laroya-215b9b252')" />
+                <img src="/assets/github.png" alt="My Github profile" class="icon" onclick="window.open('https://github.com/marklaroya')" />
             </div>
         </div>
     </section>
+
+    <!-- About Section -->
     <section id="about">
         <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title" >About Me</h1>
+        <h1 class="title">About Me</h1>
         <div class="section-container">
             <div class="section__pic-container">
-                <img src="./assets/Profile-pic 3.png" alt="Profile picture"
-                class="about-pic"
-                />
+                <img src="./assets/Profile-pic 3.png" alt="Profile picture" class="about-pic" />
             </div>
             <div class="about-details-container">
                 <div class="about-containers">
                     <div class="details-containers">
-                        <img src="./assets/experience.png" 
-                        alt="Experience icon"
-                        class="icon"
-                        />
-                    <h3>Experience</h3>
-                    <p>2+ year <br>Network Support Engineer</p>
+                        <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+                        <h3>Experience</h3>
+                        <p>2+ year <br>Network Support Engineer</p>
                     </div>
-                  
                     <div class="details-containers">
-                        <img src="./assets/education.png" 
-                        alt="Experience icon"
-                        class="icon"
-                        />
+                        <img src="./assets/education.png" alt="Experience icon" class="icon" />
                         <h3>Education</h3>
-                    <p>B.sc. Bachelors Degree <br />M.Sc. Information Technology</p>
+                        <p>B.sc. Bachelors Degree <br />M.Sc. Information Technology</p>
                     </div>
                 </div>
                 <div class="text-container">
@@ -103,13 +101,10 @@
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" 
-        alt="Arrow icon" 
-        class="icon arrow" 
-        onclick="location.href='./#experience'"
-        />
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
     </section>
 
+    <!-- Experience Section -->
     <section id="experience">
         <p class="section__text__p1">Explore My</p>
         <h1 class="title">Experience</h1>
@@ -119,61 +114,42 @@
                     <h2 class="experience-sub-title">Software Developer Experience</h2>
                     <div class="article-container">
                         <article>
-                            <img src="./assets/checkmark.png" 
-                            alt="Experience icon" 
-                            class="icon"
-                            />
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
                                 <h3>HTML</h3>
                                 <p>Experienced</p>
                             </div>
                         </article>
-                        
                         <article>
-                            <img src="./assets/checkmark.png" 
-                            alt="Experience icon" 
-                            class="icon"
-                            />
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
                                 <h3>Javascript</h3>
                                 <p>Basic</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/checkmark.png" 
-                            alt="Experience icon" 
-                            class="icon"
-                            />
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
                                 <h3>Java</h3>
                                 <p>Experienced</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/checkmark.png" 
-                            alt="Experience icon" 
-                            class="icon"
-                            />
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
                                 <h3>C++</h3>
                                 <p>Intermediete</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/checkmark.png" 
-                            alt="Experience icon" 
-                            class="icon"
-                            />
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
                                 <h3>C</h3>
                                 <p>Intermediete</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/checkmark.png" 
-                            alt="Experience icon" 
-                            class="icon"
-                            />
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
                               <h3>Python</h3>
                               <p>Intermediete</p>
@@ -185,60 +161,42 @@
                     <h2 class="experience-sub-title">Network Support Engineer</h2>
                     <div class="article-container">
                         <article>
-                            <img src="./assets/checkmark.png" 
-                            alt="Experience icon" 
-                            class="icon"
-                            />
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
                                 <h3>Troubleshooting</h3>
                                 <p>Experienced</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/checkmark.png" 
-                            alt="Experience icon" 
-                            class="icon"
-                            />
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
                                 <h3>Network Configuration</h3>
                                 <p>Experienced</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/checkmark.png" 
-                            alt="Experience icon" 
-                            class="icon"
-                            />
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
                                 <h3>Documentation and Reporting</h3>
                                 <p>Experienced</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/checkmark.png" 
-                            alt="Experience icon" 
-                            class="icon"
-                            />
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
                                 <h3>Technical Support</h3>
                                 <p>Experienced</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/checkmark.png" 
-                            alt="Experience icon" 
-                            class="icon"
-                            />
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
                                 <h3>Performance Monitoring</h3>
                                 <p>Experienced</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/checkmark.png" 
-                            alt="Experience icon" 
-                            class="icon"
-                            />
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
                                 <h3>Routing Protocols</h3>
                                 <p>Experienced</p>
@@ -247,226 +205,51 @@
                     </div>
                 </div>
             </div>
-            <img src="./assets/arrow.png" 
-        alt="Arrow icon" 
-        class="icon arrow" 
-        onclick="location.href='./#projects'"
-        />
+            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
         </div>
-    
     </section>
-   <section id="projects">
 
-    <!-- <section id="projects">
->>>>>>> 2323da2064f6e819b937f44925c489833d19906e
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/2048zuitt.png"
-                  alt="Project 1"
-                  class="project-img-1"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">2048 Game By Zuitt!</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/marklaroya/Laroya-js-2048-fcb'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://marklaroya.github.io/Laroya-js-2048-fcb/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-2.png"
-                  alt="Project 2"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Project Two</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-3.png"
-                  alt="Project 3"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Project Three</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#contact'"
-        />
-      </section> --> 
-
-    <!-- <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="project-slider">
-            <div class="project-window">
-                <!-- Project 1 
-                <div class="details-container">
-                    <img src="./assets/2048zuitt.png" alt="Project 1" class="project-img-1" />
-                    <h2 class="project-title">2048 Game By Zuitt!</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/marklaroya/Laroya-js-2048-fcb'">Github</button>
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://marklaroya.github.io/Laroya-js-2048-fcb/'">Live Demo</button>
-                    </div>
-                </div>
-                <!-- Project 2 
-                <div class="details-container">
-                    <img src="./assets/project-2.png" alt="Project 2" class="project-img-1" />
-                    <h2 class="project-title">Project Two</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
-                    </div>
-                </div>
-                <!-- Project 3 
-                <div class="details-container">
-                    <img src="./assets/project-3.png" alt="Project 3" class="project-img-1" />
-                    <h2 class="project-title">Project Three</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
-                    </div>
-                </div>
-                <!-- Project 3 
-                <div class="details-container">
-                  <img src="./assets/project-3.png" alt="Project 3" class="project-img-1" />
-                  <h2 class="project-title">Project Three</h2>
-                  <div class="btn-container">
-                      <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
-                      <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
-                  </div>
-              </div>
-              <!-- Project 3 
-              <div class="details-container">
-                <img src="./assets/project-3.png" alt="Project 3" class="project-img-1" />
-                <h2 class="project-title">Project Three</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
-                </div>
-            </div>
-            <!-- Project 3 
-            <div class="details-container">
-              <img src="./assets/project-3.png" alt="Project 3" class="project-img-1" />
-              <h2 class="project-title">Project Three</h2>
-              <div class="btn-container">
-                  <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
-                  <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
-              </div>
-          </div>
-          <!-- Project 3 
-          <div class="details-container">
-            <img src="./assets/project-3.png" alt="Project 3" class="project-img-1" />
-            <h2 class="project-title">Project Three</h2>
-            <div class="btn-container">
-                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
-                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
-            </div>
-        </div>
-            </div>
-        </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#contact'"
-        />
-    </section>  --> 
-
+    <!-- Projects Section -->
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="project-slider">
-          <div class="project-window">
-            
-              <!-- Project 1 -->
-              <div class="details-container project-card" onclick="toggleDescription(this)">
-                  <img src="./assets/2048zuitt.png" alt="Project 1" class="project-img-1" />
-                  <h2 class="project-title">2048 Game By Zuitt!</h2>
-                  <div class="btn-container">
-                      <button class="btn btn-color-2 project-btn" onclick="event.stopPropagation(); window.open('https://github.com/marklaroya/Laroya-js-2048-fcb' , '_blank')" >Github</button>
-                      <button class="btn btn-color-2 project-btn" onclick="event.stopPropagation(); window.open('https://marklaroya.github.io/Laroya-js-2048-fcb/' , '_blank')">Live Demo</button>
-                  </div>
-                  <div class="project-description">
-                      <h3>Description</h3>
-                      <p>This project is a free Javascript mini Game Workshop by Zuitt</p>
-                      <br><p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
-                  </div>
-              </div>
-  
-              <!-- Project 2 -->
-              <div class="details-container project-card" onclick="toggleDescription(this)">
-                  <img src="./assets/UpFace2.png" alt="Project 2" class="project-img-1" />
-                  <h2 class="project-title">UpFace</h2>
-                  <div class="btn-container">
-                      <button class="btn btn-color-2 project-btn" onclick="event.stopPropagation(); window.open('https://github.com/marklaroya/UpFace.git' , '_blank')">Github</button>
-                      <button class="btn btn-color-2 project-btn" onclick="event.stopPropagation(); window.open('https://up-face.vercel.app' , '_blank')">Live Demo</button>
-                  </div>
-                  <div class="project-description">
-                      <h3>Description</h3>
-                      <p>UpFace is a web application for managing and scheduling meetings.
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <button class="project-arrow left" onclick="scrollProjects(-1)">&#10094;</button>
+        <div class="project-window">
+            <!-- Project 1 -->
+            <div class="details-container project-card" onclick="toggleDescription(this)">
+                <img src="./assets/2048zuitt.png" alt="Project 1" class="project-img-1" />
+                <h2 class="project-title">2048 Game By Zuitt!</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="event.stopPropagation(); window.open('https://github.com/marklaroya/Laroya-js-2048-fcb' , '_blank')">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="event.stopPropagation(); window.open('https://marklaroya.github.io/Laroya-js-2048-fcb/' , '_blank')">Live Demo</button>
+                </div>
+                <div class="project-description">
+                    <h3>Description</h3>
+                    <p>This project is a free Javascript mini Game Workshop by Zuitt</p>
+                    <br><p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="details-container project-card" onclick="toggleDescription(this)">
+                <img src="./assets/UpFace2.png" alt="Project 2" class="project-img-1" />
+                <h2 class="project-title">UpFace</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="event.stopPropagation(); window.open('https://github.com/marklaroya/UpFace.git' , '_blank')">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="event.stopPropagation(); window.open('https://up-face.vercel.app' , '_blank')">Live Demo</button>
+                </div>
+                <div class="project-description">
+                    <h3>Description</h3>
+                    <p>UpFace is a web application for managing and scheduling meetings.
                         <br> Users can easily create, view, and manage meetings, including one-on-one and video conferences.</p>
-                       <br> <p><strong>Technologies Used:</strong> React, Elastic UI, Redux Toolkit, Firebase, ZEGOCLOUD. </p>
-                  </div>
-              </div>
-
-              <!-- Project 3 -->
-              <div class="details-container project-card" onclick="toggleDescription(this)">
+                    <br><p><strong>Technologies Used:</strong> React, Elastic UI, Redux Toolkit, Firebase, ZEGOCLOUD.</p>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="details-container project-card" onclick="toggleDescription(this)">
                 <img src="./assets/Frontliner.png" alt="Project 3" class="project-img-1" />
                 <h2 class="project-title">Frontliners</h2>
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="event.stopPropagation(); window.open('https://github.com/marklaroya/COVID-19-Frontliner-Record-Management.git' , '_blank')"    >Github </button>
-                  <!-- <button class="btn btn-color-2 project-btn" onclick=" event.stopPropagation(); location.href='https://github.com/'">Live Demo</button> -->
+                    <button class="btn btn-color-2 project-btn" onclick="event.stopPropagation(); window.open('https://github.com/marklaroya/COVID-19-Frontliner-Record-Management.git' , '_blank')">Github</button>
                 </div>
                 <div class="project-description">
                     <h3>Description</h3>
@@ -474,14 +257,13 @@
                     <br><p><strong>Technologies Used:</strong> JAVA, MS Access server, and launch4j</p>
                 </div>
             </div>
-              
-              <!-- Project 5 -->
+            <!-- Project 4 -->
             <div class="details-container project-card" onclick="toggleDescription(this)">
-                <img src="./assets/Pending.png" alt="Project 5" class="project-img-1" />
+                <img src="./assets/Pending.png" alt="Project 4" class="project-img-1" />
                 <h2 class="project-title">To be added</h2>
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick=" event.stopPropagation(); location.href='https://github.com/'">Github</button>
-                    <button class="btn btn-color-2 project-btn" onclick=" event.stopPropagation(); location.href='https://github.com/'">Live Demo</button>
+                    <button class="btn btn-color-2 project-btn" onclick="event.stopPropagation(); location.href='https://github.com/'">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="event.stopPropagation(); location.href='https://github.com/'">Live Demo</button>
                 </div>
                 <div class="project-description">
                     <h3></h3>
@@ -489,14 +271,13 @@
                     <p><strong></strong></p>
                 </div>
             </div>
-
             <!-- Project 5 -->
             <div class="details-container project-card" onclick="toggleDescription(this)">
                 <img src="./assets/Pending.png" alt="Project 5" class="project-img-1" />
                 <h2 class="project-title">To be added</h2>
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick=" event.stopPropagation(); location.href='https://github.com/'">Github</button>
-                    <button class="btn btn-color-2 project-btn" onclick=" event.stopPropagation(); location.href='https://github.com/'">Live Demo</button>
+                    <button class="btn btn-color-2 project-btn" onclick="event.stopPropagation(); location.href='https://github.com/'">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="event.stopPropagation(); location.href='https://github.com/'">Live Demo</button>
                 </div>
                 <div class="project-description">
                     <h3></h3>
@@ -504,42 +285,29 @@
                     <p><strong></strong></p>
                 </div>
             </div>
-            
-          </div>
-      </div>
-      <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#contact'"
-      />
-  </section>
+        </div>
+        <button class="project-arrow right" onclick="scrollProjects(1)">&#10095;</button>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+    </section>
 
-      
-      <section id="contact">
+    <!-- Contact Section -->
+    <section id="contact">
         <p class="section__text__p1">Get in Touch</p>
         <h1 class="title">Contact Me</h1>
         <div class="contact-info-upper-container">
             <div class="contact-info-container">
-            <img 
-            src="./assets/email.png" 
-            alt="Email icon" 
-            class="icon contact-icon email-icon"
-            />
-            <p><a href="mailto:lestermjlaroya@gmail.com">lestermjlaroya@gmail.com</a></p>
+                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+                <p><a href="mailto:lestermjlaroya@gmail.com">lestermjlaroya@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+                <p><a onclick="window.open('https://www.linkedin.com/in/mark-lester-laroya-215b9b252')">LinkedIn</a></p>
+            </div>
         </div>
-        <div class="contact-info-container">
-            <img 
-            src="./assets/linkedin.png" 
-            alt="LinkedIn icon" 
-            class="icon contact-icon"
-            />
-            <p><a onclick="window.open('https://www.linkedin.com/in/mark-lester-laroya-215b9b252')">LinkedIn</a></p>
-        </div>
-    </div>
-      </section>
+    </section>
 
-      <footer>
+    <!-- Footer -->
+    <footer>
         <nav>
             <div class="nav-links-container">
                 <ul class="nav-links">
@@ -551,8 +319,8 @@
             </div>
         </nav>
         <p>Copyright &#169; 2024 Mark Lester D Laroya. All Rights Reserved.</p>
-      </footer>
+    </footer>
 
-   <script src="/script.js"> </script>
+    <script src="script.js"></script>
 </body>
-</html> 
+</html>
