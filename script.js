@@ -1,11 +1,12 @@
-function toggleMenu(){
-    const menu =   document.querySelector(".menu-links");
-    const icon =   document.querySelector(".hamburger-icon");
+// Toggle the menu for mobile view
+function toggleMenu() {
+    const menu = document.querySelector(".menu-links");
+    const icon = document.querySelector(".hamburger-icon");
     menu.classList.toggle("open");
     icon.classList.toggle("open");
 }
 
-// for Project Section //
+// Add smooth scrolling to the project slider
 const style = document.createElement('style');
 style.textContent = `
     .project-slider {
@@ -60,8 +61,7 @@ function loadMoreProjects() {
     }, 1000); // Simulate a loading delay of 2 seconds
 }
 
-
-// for project sectiion description
+// Toggle project description visibility
 function toggleDescription(clickedCard) {
     // Get all project cards
     const allCards = document.querySelectorAll('.project-card');
@@ -89,32 +89,33 @@ function toggleDescription(clickedCard) {
 let isTouchPadScrolling = false;
 
 document.addEventListener('touchstart', () => {
-  isTouchPadScrolling = true;
+    isTouchPadScrolling = true;
 });
 
 document.addEventListener('touchend', () => {
-  isTouchPadScrolling = false;
+    isTouchPadScrolling = false;
 });
 
 projectSlider.addEventListener('touchmove', (event) => {
-  if (!isTouchPadScrolling) {
-    event.preventDefault();
-    const speedMultiplier = 3;
-    const scrollAmount = event.changedTouches[0].clientY * speedMultiplier;
+    if (!isTouchPadScrolling) {
+        event.preventDefault();
+        const speedMultiplier = 3;
+        const scrollAmount = event.changedTouches[0].clientY * speedMultiplier;
 
-    if (!isScrolling) {
-      window.requestAnimationFrame(() => {
-        projectSlider.scrollBy({
-          left: scrollAmount, // Change 'top' to 'left' for horizontal scrolling
-          behavior: 'smooth'
-        });
-        isScrolling = false;
-      });
-      isScrolling = true;
+        if (!isScrolling) {
+            window.requestAnimationFrame(() => {
+                projectSlider.scrollBy({
+                    left: scrollAmount, // Change 'top' to 'left' for horizontal scrolling
+                    behavior: 'smooth'
+                });
+                isScrolling = false;
+            });
+            isScrolling = true;
+        }
     }
-  }
 });
 
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -124,6 +125,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Scroll projects horizontally
 function scrollProjects(direction) {
     const projectWindow = document.querySelector('.project-window');
     const scrollAmount = direction * 300; // Adjust scroll amount as needed
@@ -132,3 +134,27 @@ function scrollProjects(direction) {
         behavior: 'smooth'
     });
 }
+
+// Toggle dark mode
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+    const icon = document.getElementById('dark-mode-icon');
+    icon.classList.toggle('fa-sun');
+    icon.classList.toggle('fa-moon');
+}
+
+// Check the user's preference on page load
+window.addEventListener('DOMContentLoaded', () => {
+    const darkMode = localStorage.getItem('darkMode');
+    const icon = document.getElementById('dark-mode-icon');
+    if (darkMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+        icon.classList.add('fa-moon');
+        icon.classList.remove('fa-sun');
+    } else {
+        icon.classList.add('fa-sun');
+        icon.classList.remove('fa-moon');
+    }
+});
