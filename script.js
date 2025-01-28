@@ -105,7 +105,7 @@ projectSlider.addEventListener('touchmove', (event) => {
     if (!isScrolling) {
       window.requestAnimationFrame(() => {
         projectSlider.scrollBy({
-          top: scrollAmount,
+          left: scrollAmount, // Change 'top' to 'left' for horizontal scrolling
           behavior: 'smooth'
         });
         isScrolling = false;
@@ -114,3 +114,21 @@ projectSlider.addEventListener('touchmove', (event) => {
     }
   }
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+function scrollProjects(direction) {
+    const projectWindow = document.querySelector('.project-window');
+    const scrollAmount = direction * 300; // Adjust scroll amount as needed
+    projectWindow.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+}
