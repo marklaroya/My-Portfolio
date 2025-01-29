@@ -125,12 +125,15 @@ nav {
 
 /* Hamburger-menu */
 #hamburger-nav {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hamburger-menu {
-    position: relative;
-    display: inline-block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
 
 .hamburger-icon {
@@ -446,12 +449,14 @@ article .icon {
     }
 
     section {
-        margin: 0 2rem;
+        margin: 0 1rem;
+        padding: 1rem 0;
     }
 
     #profile {
         flex-direction: column;
         gap: 1.5rem;
+        height: auto;
     }
 
     .section__pic-container {
@@ -478,7 +483,6 @@ article .icon {
 
     .project-title {
         font-size: 1.25rem;
-        margin: 100;
     }
 
     .btn {
@@ -501,6 +505,308 @@ article .icon {
     }
 }
 
+/* Responsive Styles for Medium Devices */
+@media (max-width: 375px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    section {
+        margin: 0 1rem;
+        padding: 1rem 0;
+    }
+
+    #profile {
+        flex-direction: column;
+        gap: 1.5rem;
+        height: auto;
+    }
+
+    .section__pic-container {
+        height: 150px;
+        width: 150px;
+    }
+
+    .section__text__p2 {
+        font-size: 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .details-container {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .project-img-1 {
+        height: 100px;
+    }
+
+    .project-title {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-slider {
+        overflow-x: scroll;
+    }
+
+    .project-window {
+        flex-direction: row; /* Ensure horizontal layout */
+        overflow-x: auto; /* Enable horizontal scrolling */
+    }
+
+    .project-card {
+        flex: 0 0 auto; /* Prevent cards from shrinking */
+        width: 80%; /* Adjust card width */
+        margin-right: 1rem; /* Add margin between cards */
+    }
+}
+
+/* Responsive Styles for Large Mobile Devices */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    section {
+        margin: 0 1rem;
+        padding: 1rem 0;
+    }
+
+    #profile {
+        flex-direction: column;
+        gap: 1.5rem;
+        height: auto;
+    }
+
+    .section__pic-container {
+        height: 200px;
+        width: 200px;
+    }
+
+    .section__text__p2 {
+        font-size: 1.25rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .details-container {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .project-img-1 {
+        height: 150px;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-slider {
+        overflow-x: scroll;
+    }
+
+    .project-window {
+        flex-direction: row; /* Ensure horizontal layout */
+        overflow-x: auto; /* Enable horizontal scrolling */
+    }
+
+    .project-card {
+        flex: 0 0 auto; /* Prevent cards from shrinking */
+        width: 80%; /* Adjust card width */
+        margin-right: 1rem; /* Add margin between cards */
+    }
+}
+
+/* Responsive Styles for Medium Mobile Devices */
+@media (max-width: 375px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    section {
+        margin: 0 1rem;
+        padding: 1rem 0;
+    }
+
+    #profile {
+        flex-direction: column;
+        gap: 1.5rem;
+        height: auto;
+    }
+
+    .section__pic-container {
+        height: 150px;
+        width: 150px;
+    }
+
+    .section__text__p2 {
+        font-size: 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .details-container {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .project-img-1 {
+        height: 100px;
+    }
+
+    .project-title {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-slider {
+        overflow-x: scroll;
+    }
+
+    .project-window {
+        flex-direction: row; /* Ensure horizontal layout */
+        overflow-x: auto; /* Enable horizontal scrolling */
+    }
+
+    .project-card {
+        flex: 0 0 auto; /* Prevent cards from shrinking */
+        width: 80%; /* Adjust card width */
+        margin-right: 1rem; /* Add margin between cards */
+    }
+}
+
+/* Responsive Styles for Small Mobile Devices */
+@media (max-width: 320px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    section {
+        margin: 0 1rem;
+        padding: 1rem 0;
+    }
+
+    #profile {
+        flex-direction: column;
+        gap: 1.5rem;
+        height: auto;
+    }
+
+    .section__pic-container {
+        height: 120px;
+        width: 120px;
+    }
+
+    .section__text__p2 {
+        font-size: 0.875rem;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .details-container {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .project-img-1 {
+        height: 80px;
+    }
+
+    .project-title {
+        font-size: 0.875rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-slider {
+        overflow-x: scroll;
+    }
+
+    .project-window {
+        flex-direction: row; /* Ensure horizontal layout */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        
+    }
+
+    .project-card {
+        flex: 0 0 auto; /* Prevent cards from shrinking */
+        width: 80%; /* Adjust card width */
+        margin-right: 1rem; /* Add margin between cards */
+        
+    }
+}
+
 #projects {
     position: relative;
     padding: 20px 60px; /* Add padding to make room for navigation arrows */
@@ -516,6 +822,7 @@ article .icon {
     width: calc(100% - 10px); /* Adjust width to make room for navigation arrows */
     overflow: hidden; /* Hide overflow */
     cursor: pointer;
+    
 }
 
 .details-container {
