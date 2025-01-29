@@ -90,8 +90,8 @@ nav {
 
 #dark-mode-toggle {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 2rem;
+    left: 2rem; /* Adjusted to avoid stacking with hamburger menu */
     padding: 0.5rem;
     border: none;
     border-radius: 50%;
@@ -128,12 +128,19 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    width: auto;
 }
 
 .hamburger-menu {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
 }
 
 .hamburger-icon {
