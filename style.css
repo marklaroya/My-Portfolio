@@ -65,6 +65,7 @@ a:hover {
 nav, 
 .nav-links {
     display: flex;
+    
 }
 
 nav {   
@@ -72,12 +73,14 @@ nav {
     align-items: center;
     height: 17vh;
     position: relative;
+    
 }
 
 .nav-links { 
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
+    
 }
 
 .logo {
@@ -132,6 +135,7 @@ nav {
     top: 3rem;
     right: 3rem;
     width: auto;
+    
 }
 
 .hamburger-menu {
@@ -168,6 +172,9 @@ nav {
     max-height: 0;
     overflow: hidden;
     transition: all 0.3 ease-in-out;
+    background: var(--Menu-Links-background-color);
+    
+
 }
 
 .menu-links a {
@@ -178,6 +185,7 @@ nav {
     color: black;
     text-decoration: none;
     transition: all 0.3 ease-in-out;
+    color: var(--text-color);
 }
 
 .menu-links li {
@@ -1000,6 +1008,7 @@ footer p {
 
 /* Dark mode styles */
 body.dark-mode {
+    --Menu-Links-background-color: #121212;
     --background-color: #121212;
     --text-color: #e0e0e0;
     --link-color: #e0e0e0;
@@ -1024,3 +1033,4 @@ body.dark-mode {
 body.dark-mode .section__pic-container {
     background-color: var(--section-pic-container-background-color);
 }
+
