@@ -59,6 +59,12 @@
     }
 }
 
+@media screen and (min-width: 1201px) {
+    #hamburger-nav {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 600px) {
     #contact,
     footer {
@@ -369,6 +375,7 @@
 
 }
 
+
 /* Align hamburger nav on the top right */
 #hamburger-nav {
     display: flex;
@@ -378,6 +385,9 @@
 
 .hamburger-menu {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0.1vh;
+    right: 1vh;
+    width: 1px;
 }
+
+
