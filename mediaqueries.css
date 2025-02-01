@@ -12,7 +12,7 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
     #desktop-nav {
         display: none;
     }
@@ -44,6 +44,7 @@
     }
     .about-containers {
         margin-top: 0;
+        display: flex;
     }
 
     .project-window {
@@ -52,10 +53,88 @@
     }
 
     .project-card {
-        flex: 0 0 auto; /* Prevent cards from shrinking */
-        width: 80%; /* Adjust card width */
-        margin-right: 1rem; /* Add margin between cards */
-        grid-template-columns: 1fr;
+        flex: 0 0 auto;
+        width: 60%; /* Reduce width for better scaling */
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    section {
+        margin: 0 2rem;
+        padding: 1rem 0;
+    }
+
+    #profile {
+        flex-direction: column;
+        gap: 2rem;
+        height: auto;
+    }
+
+    .section__pic-container {
+        height: 18.75rem;
+        width: 18.75rem;
+    }
+
+    .section__text__p2 {
+        font-size: 1.5rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .details-container {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .project-img-1 {
+        height: 12.5rem;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0.75rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .project-slider {
+        overflow-x: scroll;
+    }
+
+    .project-window {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .project-card {
+        flex: 0 0 auto;
+        width: 70%;
+        margin-right: 1rem;
+    }
+
+    .about-pic {
+        max-width: 15rem; /* Adjust maximum width for smaller screens */
+    }
+
+    .text-container {
+        font-size: 0.875rem; /* Adjust font size for smaller screens */
     }
 }
 
@@ -128,6 +207,14 @@
         flex: 0 0 auto; /* Prevent cards from shrinking */
         width: 80%; /* Adjust card width */
         margin-right: 1rem; /* Add margin between cards */
+    }
+
+    .about-pic {
+        max-width: 10rem; /* Adjust maximum width for smaller screens */
+    }
+
+    .text-container {
+        font-size: 0.75rem; /* Adjust font size for smaller screens */
     }
 }
 
@@ -290,7 +377,7 @@
 
     #contact,
     footer {
-        height: auto;
+        height: fit-content;
     }
     #profile {
         height: auto;
@@ -356,7 +443,6 @@
 
 /* Media Queries */
 @media (max-width: 768px) {
-
 .project-img-1 {
     width: 100%; /* Make the image full width of the card */
     height: 200px;
@@ -364,17 +450,32 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
     object-fit: cover;
     transition: 0.4s ease; /* Smooth transition */
-
     flex-wrap: nowrap; /* Maintain horizontal scrolling */
-        overflow-x: auto;
+    overflow-x: auto;
 }
 .details-container {
   width: 300px; /* Smaller width for smaller screens */
   margin: 1rem; /* Reduce margin for better spacing */
+  
+}
+.project-card {
+    flex: 0 0 auto; /* Prevent cards from shrinking */
+    width: 85%; /* Adjust card width */
+    margin-right: 1rem; /* Add margin between cards */
 }
 
-}
+.about-pic {
+        max-width: 12rem; /* Adjust maximum width for smaller screens */
+    }
 
+.text-container {
+        font-size: 0.75rem; /* Adjust font size for smaller screens */
+    }
+.project-title {
+        font-size: 70%;
+        text-align: center;
+    }
+}
 
 /* Align hamburger nav on the top right */
 #hamburger-nav {
